@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: baby-snake
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: snake
+  template:
+    metadata:
+      labels:
+        app: snake
+    spec:
+      containers:
+        - name: baby-snake
+          image: baby-snake:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: baby-snake-service
+spec:
+  selector:
+    app: snake
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 5000
+      nodePort: 30082

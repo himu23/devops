@@ -1,0 +1,51 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+  margin-top: 20px;
+}
+
+#game-area {
+  position: relative;
+  margin: auto;
+  width: 400px;
+  height: 400px;
+  background-color: #222;
+  border: 2px solid #000;
+}
+
+.snake {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: lime;
+}
+
+.food {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+}
+
+h1, h3 {
+  margin: 10px;
+}
+
+footer {
+  margin-top: 30px;
+}
+#controls {
+  margin-top: 20px;
+}
+
+#controls button {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  font-size: 24px;
+  border-radius: 10px;
+  border: none;
+  background-color: #444;
+  color: white;
+}
